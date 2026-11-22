@@ -1,0 +1,20 @@
+{
+  "id": "cafe",
+  "name": "Quán cafe / WiFi",
+  "category": "Quán / Dịch vụ",
+  "description": "Router, 2 AP, máy POS",
+  "version": 1,
+  "devices": [
+    {"ref":"internet1","type":"internet","label":"Internet","x":300,"y":60},
+    {"ref":"router1","type":"router","label":"Router WiFi","x":300,"y":180},
+    {"ref":"ap1","type":"ap","label":"AP Sảnh","x":160,"y":300},
+    {"ref":"ap2","type":"ap","label":"AP Sân","x":440,"y":300},
+    {"ref":"pc1","type":"pc","label":"POS","x":300,"y":320}
+  ],
+  "connections": [
+    {"from":"internet1","to":"router1"},
+    {"from":"router1","to":"ap1"},
+    {"from":"router1","to":"ap2"},
+    {"from":"router1","to":"pc1"}
+  ]
+}

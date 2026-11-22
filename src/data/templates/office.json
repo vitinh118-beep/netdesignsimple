@@ -1,0 +1,24 @@
+{
+  "id": "office",
+  "name": "Văn phòng nhỏ",
+  "category": "Văn phòng",
+  "description": "1 router, 1 switch, WiFi, PC, máy in",
+  "version": 1,
+  "devices": [
+    {"ref":"internet1","type":"internet","label":"Internet","x":400,"y":60},
+    {"ref":"router1","type":"router","label":"Router","x":400,"y":180},
+    {"ref":"switch1","type":"switch","label":"Switch","x":400,"y":300},
+    {"ref":"ap1","type":"ap","label":"WiFi AP","x":220,"y":420},
+    {"ref":"pc1","type":"pc","label":"PC 1","x":340,"y":420},
+    {"ref":"pc2","type":"pc","label":"PC 2","x":460,"y":420},
+    {"ref":"printer1","type":"printer","label":"Máy in","x":580,"y":420}
+  ],
+  "connections": [
+    {"from":"internet1","to":"router1"},
+    {"from":"router1","to":"switch1"},
+    {"from":"switch1","to":"ap1"},
+    {"from":"switch1","to":"pc1"},
+    {"from":"switch1","to":"pc2"},
+    {"from":"switch1","to":"printer1"}
+  ]
+}

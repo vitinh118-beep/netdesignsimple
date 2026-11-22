@@ -1,0 +1,24 @@
+{
+  "id": "cctv",
+  "name": "Camera giám sát",
+  "category": "An ninh",
+  "description": "Switch PoE, NVR và 3 camera",
+  "version": 1,
+  "devices": [
+    {"ref":"router1","type":"router","label":"Router","x":400,"y":60},
+    {"ref":"switch1","type":"switch","label":"Switch PoE","x":400,"y":180},
+    {"ref":"nvr1","type":"nvr","label":"NVR","x":200,"y":300},
+    {"ref":"camera1","type":"camera","label":"Cam 1","x":340,"y":320},
+    {"ref":"camera2","type":"camera","label":"Cam 2","x":460,"y":320},
+    {"ref":"camera3","type":"camera","label":"Cam 3","x":580,"y":320},
+    {"ref":"pc1","type":"pc","label":"PC xem","x":60,"y":300}
+  ],
+  "connections": [
+    {"from":"router1","to":"switch1"},
+    {"from":"switch1","to":"nvr1"},
+    {"from":"switch1","to":"camera1"},
+    {"from":"switch1","to":"camera2"},
+    {"from":"switch1","to":"camera3"},
+    {"from":"switch1","to":"pc1"}
+  ]
+}

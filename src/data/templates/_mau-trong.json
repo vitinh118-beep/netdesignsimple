@@ -1,0 +1,14 @@
+{
+  "id": "ten-mau-khong-dau",
+  "name": "Tên mẫu hiển thị",
+  "category": "Văn phòng",
+  "description": "Mô tả ngắn 1 câu: mẫu này dùng cho trường hợp nào",
+  "version": 1,
+  "devices": [
+    {"ref": "router1", "type": "router", "label": "Router", "x": 300, "y": 60},
+    {"ref": "pc1", "type": "pc", "label": "PC 1", "x": 300, "y": 180}
+  ],
+  "connections": [
+    {"from": "router1", "to": "pc1"}
+  ]
+}

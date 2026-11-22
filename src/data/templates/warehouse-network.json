@@ -1,0 +1,30 @@
+{
+  "id": "warehouse-network",
+  "name": "Mạng kho hàng",
+  "category": "Kho / Nhà xưởng",
+  "description": "Khu văn phòng + khu kho có WiFi và camera",
+  "version": 1,
+  "devices": [
+    {"ref":"internet1","type":"internet","label":"Internet","x":400,"y":60},
+    {"ref":"router1","type":"router","label":"Router","x":400,"y":180},
+    {"ref":"switch1","type":"switch","label":"Switch Văn phòng","x":280,"y":300},
+    {"ref":"switch2","type":"switch","label":"Switch Kho","x":520,"y":300},
+    {"ref":"server1","type":"server","label":"Server WMS","x":40,"y":420},
+    {"ref":"pc1","type":"pc","label":"PC Kế toán","x":200,"y":420},
+    {"ref":"printer1","type":"printer","label":"Máy in tem","x":340,"y":420},
+    {"ref":"ap1","type":"ap","label":"AP Kho A","x":480,"y":420},
+    {"ref":"ap2","type":"ap","label":"AP Kho B","x":620,"y":420},
+    {"ref":"camera1","type":"camera","label":"Camera kho","x":760,"y":420}
+  ],
+  "connections": [
+    {"from":"internet1","to":"router1"},
+    {"from":"router1","to":"switch1"},
+    {"from":"router1","to":"switch2"},
+    {"from":"switch1","to":"server1"},
+    {"from":"switch1","to":"pc1"},
+    {"from":"switch1","to":"printer1"},
+    {"from":"switch2","to":"ap1"},
+    {"from":"switch2","to":"ap2"},
+    {"from":"switch2","to":"camera1"}
+  ]
+}

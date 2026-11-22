@@ -1,0 +1,29 @@
+{
+  "name": "netdesign-lite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "check:templates": "node scripts/check-templates.mjs",
+    "build:viewer": "node scripts/build-viewer.mjs",
+    "predev": "npm run build:viewer",
+    "dev": "vite",
+    "prebuild": "npm run check:templates && npm run build:viewer",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.5.2",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "@types/three": "^0.170.0",
+    "esbuild": "^0.25.5"
+  }
+}

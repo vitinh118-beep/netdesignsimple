@@ -1,0 +1,22 @@
+{
+  "id": "home-network",
+  "name": "Mạng gia đình",
+  "category": "Gia đình",
+  "description": "Router WiFi, laptop, PC, máy in, camera cửa",
+  "version": 1,
+  "devices": [
+    {"ref":"internet1","type":"internet","label":"Internet","x":300,"y":60},
+    {"ref":"router1","type":"router","label":"Router WiFi","x":300,"y":180},
+    {"ref":"laptop1","type":"laptop","label":"Laptop","x":160,"y":320},
+    {"ref":"pc1","type":"pc","label":"PC","x":300,"y":320},
+    {"ref":"printer1","type":"printer","label":"Máy in","x":440,"y":320},
+    {"ref":"camera1","type":"camera","label":"Camera cửa","x":580,"y":180}
+  ],
+  "connections": [
+    {"from":"internet1","to":"router1"},
+    {"from":"router1","to":"laptop1"},
+    {"from":"router1","to":"pc1"},
+    {"from":"router1","to":"printer1"},
+    {"from":"router1","to":"camera1"}
+  ]
+}

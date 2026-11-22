@@ -1,0 +1,26 @@
+{
+  "id": "dual-isp",
+  "name": "2 ISP + Firewall",
+  "category": "Doanh nghiệp",
+  "description": "Doanh nghiệp nhỏ có server, NAS",
+  "version": 1,
+  "devices": [
+    {"ref":"internet1","type":"internet","label":"ISP 1","x":260,"y":60},
+    {"ref":"internet2","type":"internet","label":"ISP 2","x":540,"y":60},
+    {"ref":"router1","type":"router","label":"Router WAN","x":400,"y":180},
+    {"ref":"firewall1","type":"firewall","label":"Firewall","x":400,"y":300},
+    {"ref":"switch1","type":"switch","label":"Core Switch","x":400,"y":420},
+    {"ref":"server1","type":"server","label":"Server","x":260,"y":540},
+    {"ref":"nas1","type":"nas","label":"NAS","x":400,"y":540},
+    {"ref":"ap1","type":"ap","label":"WiFi AP","x":540,"y":540}
+  ],
+  "connections": [
+    {"from":"internet1","to":"router1"},
+    {"from":"internet2","to":"router1"},
+    {"from":"router1","to":"firewall1"},
+    {"from":"firewall1","to":"switch1"},
+    {"from":"switch1","to":"server1"},
+    {"from":"switch1","to":"nas1"},
+    {"from":"switch1","to":"ap1"}
+  ]
+}
